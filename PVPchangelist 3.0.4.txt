@@ -1,4 +1,4 @@
-[b][u]Project Vumsy Patch Ver. 3.0.3[/u][/b]
+[b][u]Project Vumsy Patch Ver. 3.0.4[/u][/b]
 ____________________________________
 [b][u]Brief overview:[/u][/b]
 
@@ -31,10 +31,12 @@ To uninstall, remove all contents except altsaves.toml, either through deleting 
 
 If you are updating from a previous version, simply delete the old "mod" folder content and replace it with the content in this one.
 ____________________________________
-[b][u]Changes since Ver. 3.0.2 patch notes[/u][/b]
+[b][u]Changes since Ver. 3.0.3 patch notes[/u][/b]
 
-[*] Updated to match 1.08 patch.
-[*] HAL legs custom changes reverted, Verril legs custom changes reverted, Stun needle does not have the custom projectile speed + recently buffed projectile speed. Ludlow has custom projectile speed + recently buffed projectile speed. Dizzy reload is vanilla now.
+[list]
+[*]Hitstop animation playback speed increased from 60% to 90% to reduce animation slowdown from multiple rapid damage instances.
+[*]Aimpunch, damage instances deviating the model and throwing off aim, has been removed from the moment you raise your weapon until the moment you attack on all weapons.
+[/list]
 ____________________________________
 [b][u]Vanilla comparison patch notes:[/u][/b]
 
@@ -93,7 +95,7 @@ ____________________________________
 [list]
 [*]Energy recovery per second while airborne increased from [b]5[/b] and [b]10[/b] while boosting/not boosting to [b]10[/b] and [b]20[/b].
 [*]Removed EN recovery delay when landing.
-[*]Stagger no longer resets redline or delay energy recovery, now applies massively penalized regeneration speed.
+[*]Stagger no longer resets redline or delay energy recovery, now applies penalized regeneration speed.
 [/list]
 [b]Firearm Specialization and Recoil:[/b]
 [list]
@@ -116,6 +118,8 @@ ____________________________________
 [/list]
 [b]Misc:[/b]
 [list]
+[*]Hitstop animation playback speed increased from 60% to 90% to reduce animation slowdown from multiple rapid damage instances.
+[*]Aimpunch, damage instances deviating the model and throwing off aim, has been removed from the moment you raise your weapon until the moment you attack on all weapons.
 [*]Stance fire momentum falloff has been made more erratic in the horizontal and upwards direction on bipeds and RJ's, where it retains full momentum for a duration then rapidly halts to zero in order to throw off enemy FCS better.
 [*]Shoulder cannons only lowers rotation speed upon firing on bipeds and RJ's.
 [*]Weapon bay reload penalty lowered from [b]50%[/b] to [b]25%[/b].
