@@ -1,4 +1,4 @@
-[b][u]Project Vumsy Patch Ver. 3.0.4[/u][/b]
+[b][u]Project Vumsy Patch Ver. 3.0.8[/u][/b]
 ____________________________________
 [b][u]Brief overview:[/u][/b]
 
@@ -6,7 +6,7 @@ This is a PvP patch meant for modded online play that adjusts underperforming pa
 
 [list]
 [*]Nothing has been nerfed, one number might've gone slightly down to bring other numbers drastically up.
-[*]Everything that were not strong in terms of parts, weapons, mechanics, etc, has been buffed.
+[*]Everything not strong in terms of parts, weapons, mechanics, etc, has been buffed.
 [*]Everything that was already good has been left alone as much as possible.
 [*]Melee specialization deals less damage, but increases melee uptime significantly.
 [*]Shields no longer hard counter melee and status, multiple shields has been buffed.
@@ -21,21 +21,116 @@ Detailed patch notes comparing vanilla can be found below.
 ____________________________________
 [b][u]Installation guide:[/u][/b]
 
-Either copy and paste the contents inside this folder into your Open Server/Mod Engine 2 "mod" folder or rename the folder into "mod" or whatever folder you've adjusted Open Server/Mod Engine 2 to read mods from.
+Either copy and paste the contents inside this folder into your Open Server "mod" folder or rename the folder into "mod" or whatever folder you've adjusted Open Server to read mods from.
 
-Launch by using launchmod_armoredcore6.bat to play modded and through steam to play vanilla. The game will launch without anti cheat, and save files and mods will be separate from your vanilla files.
+Launch by using launchmod_armoredcore6.bat to play modded and through Steam to play vanilla. The game will launch without anti cheat, and save files and mods will be separate from your vanilla files.
 
 If you want to use your vanilla save file, locate and copy your AC60000.sl2 save file, and rename the copy's extension to AC60000.pvp and leave it in your save folder. (WARNING: Do not revert a .pvp file back to .sl2, you will risk a ban.)
 
-To uninstall, remove all contents except altsaves.toml, either through deleting the old contents of the "mod" folder or renaming the folder.
+To uninstall, remove all contents except altsaves.toml to keep reading your .pvp save, either through deleting the old contents of the "mod" folder or renaming the folder.
 
 If you are updating from a previous version, simply delete the old "mod" folder content and replace it with the content in this one.
 ____________________________________
-[b][u]Changes since Ver. 3.0.3 patch notes[/u][/b]
+[b][u]Changes since Ver. 3.0.7 patch notes[/u][/b]
+
+With more people playing, more data has been acquired to further adjust overall power-level, a select few things are being brought down a smidge, while other things are being pushed to match. More players also call for increased transparency.
+Summarized, WLT and Ludlow were already strong, and further benefitted from system adjustments. Will implement systematic nerfs and introducing weapon competitors.
+Heavy weight mobility is a little out of line, but rush down is not particularly strong, do going to help assault boost in general and bring down assault boost speed at the heaviest.
+Kites are overall in a very strong spot with mobility/soft-lock QoL, easing the backpedal penalty isn't necessary anymore. If proven out of line in the future, that's part kites playing well with better netcode, and competitors being undertuned, don't think they need more future adjustments in the foreseeable future.
+Assault boost rush-down has fallen behind melee boosting's faster and direct approach, as well as the game in general being more slippery. So assault boost hard-lock tracking is slightly better just to keep up and soft-lock is much, much stronger.
+While Yue Yu doing well is very fun, Iridium doing this well makes it scary to think of what a Lammergeier, Wheelchair or similar could do with it. Its issue with it's increased reliability is uptime, so reverting the reload.
+Melee seems strong, but doesn't completely dominate. There are however a few over-tuned and lackluster melee attacks on a case by case basis. There's also new-found frustration when playing against high uptime melee, but playing against strong strategies are frustrating inherently, so needs more time for player-base to adapt before drastic system changes. For now, a few outliers will be addressed, temporarily if needed.
+Electric discharge being more applicable now also calls for a slight nerf in damage.
+The rest are buffs and QoL and bugfixes, enjoy!
+
+[b]Nerfs (Not nerfed from vanilla, only relative to earlier mod patches)[/b]
 
 [list]
-[*]Hitstop animation playback speed increased from 60% to 90% to reduce animation slowdown from multiple rapid damage instances.
-[*]Aimpunch, damage instances deviating the model and throwing off aim, has been removed from the moment you raise your weapon until the moment you attack on all weapons.
+[*]Weight modifier on assault boost decreased from [b]0.75[/b] terminal and initial speed at [b]150,000[/b] weight to [b]0.65[/b]. (Heavies are just zooming too fast)
+
+[*]Projectile size expansion after 250m lowered from [b]6[/b] to [b]5[/b]. (WLT sniping is a little much)
+
+[*]Backpedal penalty reverted to vanilla, so [b]93%[/b] to [b]92%[/b]. (Due to soft-lock kiting being more viable now)
+
+[*]Initial quick boost thrust duration on tetrapod lowered, from [b]0.2[/b] to vanilla [b]0.1[/b]. Other leg types untouched. (Performs too well with such strong mobility, stability and aerial versatility)
+
+[*]Electric discharge damage lowered from [b]9%[/b] to [b]8.5%[/b] AP. (Reliable application means a tone down.)
+
+[*]Select problematic melee attacks have been adjusted and are now easier to dodge. The attacks are Pulse Blade charged, Laser Slicer charged and Laser Dagger charged. (Might get buffed again in the future if general playerbase improves at dealing with melee, right now they're steamrolling a little too much with new found uptime and target access)
+
+[*][b]LASER SLICER - Vvc-774LS[/b] Laser slicer charged momentum slightly lowered. Shield damage reduction and impact reduction reduced from [b]50[/b] to [b]45[/b]. (Slightly overperforming with cooldown melee spec)
+
+[*][b]MACHINE GUN - MG-014 LUDLOW[/b] Projectile speed reverted from [b]560[/b] to vanilla [b]530[/b]. (LW killer)
+
+[*][b]GRENADE LAUNCHER - IRIDIUM[/b] Reload reverted from [b]3.4[/b] to vanilla [b]3.8[/b]. (It's uptime is just too high with it's newfound reliable output)
+
+[*][b]CORAL RIFLE - IB-C03W1: WLT 011[/b] Aim speed lowered from [b]85[/b] to [b]80[/b] on full charge, ([b]75[/b] in vanilla.) (The full charge isn't that good, but the rest of WLT is, so meeting in the middle.)
+[/list]
+
+[b]Buffs[/b]
+
+[list]
+[*]Assault boost aim speed increased while soft-locked in Assault Boost, while AB shuffling and Kicking. (A lot better, fast enough to be used in CQC even)
+
+[*]Assault boost tracking increased while hard-locked in Assault Boost and while AB shuffling. (Just a little, 5 to 10 degrees in turn speed, doesn't affect kick tracking)
+
+[*]Assault boost shuffle retains speed throughout thrust. (To keep up with other mobility buffs)
+
+[*]Melee boost weight curve is now identical to assault boost. [b]40,000, 62,500, 75,000, 100,000, 150,000[/b] (Somewhat worse for ultra heavy melee, better just above and below 75k, so more weight leeway and easier to work with)
+
+[*][b]BURST ASSAULT RIFLE - MA-J-201 RANSETSU-AR[/b] Burst fire interval lowered from [b]0.09[/b] to [b]0.075[/b]. (Still not competitive with LR/MG)
+
+[*][b]MACHINE GUN - DF-MG-02 CHANG-CHEN[/b] Projectile speed reverted from [b]550[/b] to vanilla [b]520[/b]. Fire rate increased from [b]10[/b] to [b]11[/b]. (Ludlow competition)
+
+[*][b]BAZOOKA - LITTLE GEM[/b] Projectile speed increased from [b]345[/b] to [b]350[/b]. Will now knock opponents back horizontally to make lining up combos easier. (Underperforming, 350 is the sweet spot for FCS targeting)
+
+[*][b]BAZOOKA - MAJESTIC[/b] Projectile speed increased from [b]345[/b] to [b]350[/b]. Will now knock opponents back horizontally to make lining up combos easier. (WLT competitor)
+
+[*][b]BAZOOKA - DF-BA-06 XUAN-GE[/b] Will now knock opponents back horizontally to make lining up combos easier. (QoL)
+
+[*][b]DETONATING BAZOOKA - 44-141 JVLN ALPHA[/b] Will now knock opponents back horizontally to make lining up combos easier. (QoL)
+
+[*][b]MULTI ENERGY RIFLE - 44-142 KRSV[/b] Projectile speed increased from [b]500[/b] to [b]600[/b] on normal fire. [*]Impact increased from [b]486[/b] to [b]499[/b] on charged fire. Accumulated impact increased from [b]169[/b] to [b]174[/b] on charged fire. Fixed a bug where full charge fire dealt inconsistent damage. (WLT competitor)
+
+[*][b]SPREAD BAZOOKA - SB-033M MORLEY[/b] Projectile speed increased from [b]280[/b] to [b]300[/b]. Will now knock opponents back horizontally to make lining up combos easier. (Underperforming and Qol)
+
+[*][b]LASER CANNON - VE-60LCB[/b] Charged fire projectile speed increased from [b]550[/b] to [b]730[/b]. (Fasan/LCA/SNA competitor)
+
+[*][b]PLASMA CANNON - FASAN/60E[/b] Charge fire damage interval lowered from 0.1 per second to 0.9 per second. (Damage is the same, duration lowered from 1.2 to 1.08 seconds, a PA immunity compensation)
+
+[*][b]PULSE SHIELD LAUNCHER - EULE/60D[/b] Initial blast range is 7 again. (It's a reasonable weapon now, so can get some power back from previous versions.)
+
+[*][b]VERTICAL MISSILE LAUNCHER - BML-G1/P01VTC-04[/b] Will redirect after 1 second if target is high up. Direct hit modifier increased from [b]155[/b] to [b]165[/b]. Reload time lowered from [b]4.8[/b] to [b]3.5[/b]. (Trying to get Verts in a playable spot.)
+
+[*][b]VERTICAL MISSILE LAUNCHER - BML-G1/P03VTC-08[/b] Will redirect after 1 second if target is high up. Direct hit modifier increased from [b]155[/b] to [b]165[/b]. Reload time lowered from [b]6[/b] to [b]3.9[/b] (But these things can't cost EN to dodge.)
+
+[*][b]VERTICAL MISSILE LAUNCHER - BML-G1/P07VTC-12[/b] Will redirect after 1 second if target is high up. Direct hit modifier increased from [b]155[/b] to [b]165[/b]. Reload time lowered from [b]7.5[/b] to [b]5.8[/b](Or they become the best missile in the game.)
+
+[*][b]CONTAINER MISSILE LAUNCHER - BML-G1/P29CNT[/b] Initial velocity reverted to vanilla. Missiles acceleration increased from [b]60[/b] to [b]75[/b]. Now aims [b]45[/b] degree aim upwards when locked on to opponent. (Qol, will possibly try to make it offset aim upwards through animations in the future)
+
+[*][b]CLUSTER MISSILE LAUNCHER - WR-0999 DELIVERY BOY[/b] Further improved payload speed. Barrages a larger area. (Underperforming and unpopular)
+
+[*][b]LASER TURRET - VP-60LT[/b] Direct hit adjustment increased from [b]35[/b] to [b]40[/b]. Effective range increased from [b]304[/b] to [b]370[/b] meters. (LT punish buff, can be farther away before ricochet)
+
+[*][b]VE-20A[/b] EN capacity increased from [b]2570[/b] to [b]2600[/b]. EN recharge increased from [b]787[/b] to [b]800[/b]. (VE-20B competitor as low weight alt)
+
+[*][b]VE-20C[/b] EN capacity increased from [b]3690[/b] to [b]3700[/b]. EN recharge increased from [b]555[/b] to [b]588[/b]. (VE-20B competitor as high EN output alt)
+[/list]
+
+[b]QoL/Bugfixes:[/b]
+
+[list]
+[*]Last patch had an emergency fix to Therapists unintended shock build up, it is included in this patch.
+
+[*]Fixed an introduced issue where melee precancel couldn't ascend vertically.
+
+[*]Pile bunker charge attack uses EN, so it halts EN recovery again.
+
+[*]Adjusted charge lance and normal lance to slow down when extremely close to enemy to prevent slipping and missing.
+
+[*]Charged lance slingshot timing eased.
+
+[*]Landing animations have been adjusted to be actionable earlier.
 [/list]
 ____________________________________
 [b][u]Vanilla comparison patch notes:[/u][/b]
@@ -53,11 +148,11 @@ ____________________________________
 [*]Various movement values have made melee boost track better, retain momentum and be more responsive.
 [*]Melee will no longer cancel missile barrages.
 [*]Melee boosting will accelerate up to the same maximum velocity of [b]900[/b] and initial EN cost removed.
-[*]Melee boost weight penalty lowered from [b]0.85[/b], [b]0.75[/b] and [b]0.65[/b] to [b]0.9[/b], [b]0.8[/b] and [b]0.7[/b] at [b]75,000[/b], [b]80,000[/b] and [b]120,000[/b] weight.
+[*]Melee boost weight penalty weight thresholds changed from [b]40,000, 62,500, 75,000, 80,000, 120,000[/b] to [b]40,000, 62,500, 75,000, 100,000, 150,000[/b]. (The modifiers are [b]1, 0,95, 0,85, 0,75, 0,65[/b]).
 [/list]
 [b]Projectiles and FCS:[/b]
 [list]
-[*]Projectiles traveling past [b]250[/b] meters accelerate by [b]1500[/b] until reaching [b]1500[/b] velocity and stanced shots grow to 6 meters in size.
+[*]Projectiles traveling past [b]250[/b] meters accelerate by [b]1500[/b] until reaching [b]1500[/b] velocity and stanced shots grow to 5 meters in size.
 [*]Projectiles gradually lose damage and impact over distance from full to minimum [b]1[/b] damage.
 [*]Ricochet damage increased from [b]5%[/b] to [b]50%[/b] and scales more aggressively until maxed at 1400 defense.
 [*]FCS predictive firing increased from [b]390[/b] to [b]450[/b] meters.
@@ -79,7 +174,7 @@ ____________________________________
 [list]
 [*]Quick boost will fire fully automatic weapons much sooner and allow non-stance weapons to be fired during the brief initial wind up.
 [*]Long quick boost wind ups have been compensated for and will let actions be performed at a standardized timing.
-[*]All boosters QB Thrust increased.
+[*]Quick boost retains speed throughout thrust.
 [*]Quick boost initial speed is the same at all weight ranges.
 [/list]
 [b]Assault Boost:[/b]
@@ -88,8 +183,10 @@ ____________________________________
 [*]Fully automatic weapons and weapon swap has been made available as soon as other actions after kicks.
 [*]Assault boost shuffle will fire fully automatic weapons much sooner.
 [*]Assault boost wind up allow fully automatic and melee weapons to be used sooner.
-[*]Assault boost aim speed increased while in Assault Boost, while AB shuffling and Kicking.
-[*]Weight penalty on assault boost lowered from [b]0.65, 0.7[/b] and [b]0.5, 0.55[/b] to [b]0.75, 0.8[/b] and [b]0.65, 0.7[/b] at [b]100,000[/b] and [b]150,000[/b] weight.
+[*]Assault boost aim speed increased while soft-locked in Assault Boost, while AB shuffling and Kicking.
+[*]Assault boost tracking increased while hard-locked in Assault Boost and while AB shuffling.
+[*]Assault boost shuffle retains speed throughout thrust.
+[*]Weight modifier on assault boost increased from [b]0.95, 0.9, 0.7, 0.55[/b] terminal speed and [b]0.9, 0.85, 0.65, 0.5[/b] initial speed to [b]0.95, 0.9, 0.8, 0.65[/b] terminal and initial speed at [b]50,000, 75,000, 100,000, 150,000[/b] weight.
 [/list]
 [b]Energy:[/b]
 [list]
@@ -120,6 +217,12 @@ ____________________________________
 [list]
 [*]Hitstop animation playback speed increased from 60% to 90% to reduce animation slowdown from multiple rapid damage instances.
 [*]Aimpunch, damage instances deviating the model and throwing off aim, has been removed from the moment you raise your weapon until the moment you attack on all weapons.
+[*]Pivoting while softlocked has become stricter on input relative to AC orientation.
+[*]Quickly turning to perform actions have been significantly sped up.
+[*]Turning during boost has been made sharper.
+[*]Pivot animations have been adjusted to be actionable earlier.
+[*]Landing animations have been adjusted to be actionable earlier.
+[*]Bipeds now have unlocked camera during kicks like other leg types.
 [*]Stance fire momentum falloff has been made more erratic in the horizontal and upwards direction on bipeds and RJ's, where it retains full momentum for a duration then rapidly halts to zero in order to throw off enemy FCS better.
 [*]Shoulder cannons only lowers rotation speed upon firing on bipeds and RJ's.
 [*]Weapon bay reload penalty lowered from [b]50%[/b] to [b]25%[/b].
@@ -141,7 +244,6 @@ ____________________________________
 [b]PILE BUNKER - PB-033M ASHMEAD[/b]
 [list]
 [*]Charged attack damage is now only on the main attack, and removed from the initial flinch, meaning damage is unchanged except slightly increased on direct hit.
-[*]Charged attack no longer resets redline.
 [/list]
 [b]EXPLOSIVE THROWER - DF-ET-09 TAI-YANG-SHOU[/b]
 [list]
@@ -188,7 +290,7 @@ Charged attack:
 [b]LASER SLICER - Vvc-774LS[/b]
 [list]
 [*]Stagger extension total points on both attacks lowered from [b]1000[/b] to [b]960[/b].
-[*]Shield size increased, start up faster, damage mitigation increased from [b]40[/b] to [b]50[/b], impact mitigation increased from [b]30[/b] to [b]50[/b].
+[*]Shield size increased, start up faster, damage mitigation increased from [b]40[/b] to [b]45[/b], impact mitigation increased from [b]30[/b] to [b]45[/b].
 [*]Charged attack recovery improved.
 [/list]
 [b]LASER LANCE - VE-67LLA[/b]
@@ -276,18 +378,16 @@ Charged attack:
 [*]Damage increased from [b]77x3[/b] to [b]88x3[/b].
 [*]Direct hit modifier increased from [b]185[/b] to [b]220[/b].
 [*]Rapid fire increased from [b]3.2[/b] to [b]3.6[/b] seconds.
+[*]Burst fire interval lowered from [b]0.09[/b] to [b]0.075[/b].
 [*]Recoil lowered from [b]7[/b] to [b]6[/b].
 [*]Magazine rounds increased from [b]18[/b] to [b]24[/b].
 [*]Ammo capacity increased from [b]450[/b] to [b]600[/b].
 [*]Projectile speed increased from [b]550[/b] to [b]600[/b].
 [/list]
-[b]MACHINE GUN - MG-014 LUDLOW[/b]
-[list]
-[*]Projectile speed increased from [b]530[/b] to [b]560[/b].
-[/list]
 [b]MACHINE GUN - DF-MG-02 CHANG-CHEN[/b]
 [list]
-[*]Projectile speed increased from [b]520[/b] to [b]550[/b].
+[*]Fire rate increased from [b]10[/b] to [b]11[/b].
+[*]Reload speed lowered from [b]2.2[/b] to [b]1.8[/b] seconds.
 [/list]
 [b]HEAVY MACHINE GUN - WR-0555 ATTACHE[/b]
 [list]
@@ -301,6 +401,12 @@ Charged attack:
 [*]Recoil reduced from [b]5[/b] to [b]3[/b].
 [*]Firing angle increased from [b]15[/b] to [b]25[/b].
 [*]Wind up before firing lowered by [b]1[/b] frame.
+[/list]
+[b]SHOTGUN - SG-026 HALDEMAN[/b]
+[list]
+[*]Damage increased from [b]576[/b] to [b]584[/b]
+[*]Impact increased from [b]360[/b] to [b]376[/b].
+[*]Accumulative impact increased from [b]280[/b] to [b]288[/b].
 [/list]
 [b]SHOTGUN - WR-0777 SWEET SIXTEEN[/b]
 [list]
@@ -342,13 +448,21 @@ Charged attack:
 [list]
 [*]Projectile speed increased from [b]320[/b] to [b]330[/b].
 [/list]
+[b]BAZOOKA - MAJESTIC[/b]
+[list]
+[*]Projectile speed increased from [b]345[/b] to [b]350[/b].
+[*]Will now knock opponents back horizontally to make lining up combos easier.
+[/list]
 [b]BAZOOKA - LITTLE GEM[/b]
 [list]
+[*]Projectile speed increased from [b]345[/b] to [b]350[/b].
+[*]Will now knock opponents back horizontally to make lining up combos easier.
 [*]Proximity detonation increased from [b]7[/b] to [b]8[/b].
 [/list]
 [b]DETONATING BAZOOKA - 44-141 JVLN ALPHA[/b]
 [list]
 [*]Stagger extends.
+[*]Will now knock opponents back horizontally to make lining up combos easier.
 [/list]
 [b]GRENADE LAUNCHER - DF-GR-07 GOU-CHEN[/b]
 [list]
@@ -371,7 +485,6 @@ Charged attack:
 [/list]
 [b]GRENADE LAUNCHER - IRIDIUM[/b]
 [list]
-[*] Reload reduced from [b]3.8[/b] to [b]3.4[/b].
 [*]Projectile speed increased from [b]420[/b] to [b]450[/b].
 [*]Expiration range decreased from [b]245[/b] to [b]235[/b].
 [*]Firing angle increased from [b]15[/b] to [b]20[/b].
@@ -384,10 +497,10 @@ Charged attack:
 [*]Burn status build up on hit decreased from [b]100 + 100 + 100 (300)[/b] to [b]58 + 58 + 58 (174)[/b].
 [*]Burn status build up from burn decreased from [b]50[/b] to [b]27[/b].
 [*]Projectile speed increased from [b]250[/b] to [b]300[/b].
-[*]Firing angle increased from [b]1[/b]5 and [b]25[/b] to [b]30[/b].
+[*]Firing angle increased from [b]15[/b] and [b]25[/b] to [b]30[/b].
 [*]Hitbox size increased from [b]1[/b] to [b]5[/b].
 [*]Knockback on stagger reduced from [b]120[/b] to [b]85[/b].
-[*]Stagger extends.
+[*]Fires all shots simultaneously and stagger extends.
 [*]System recovery reworked.
 [/list]
 [b]JAMMING BOMB LAUNCHER - MA-T-223 KYORIKU[/b]
@@ -398,7 +511,7 @@ Charged attack:
 [b]STUN BOMB LAUNCHER - WS-1200 THERAPIST[/b]
 [list]
 [*]Status build up increased from [b]18 + 18 + 18 (54)[/b] to [b]21 + 21 + 21 (63)[/b].
-[*]Stagger extends.
+[*]Deals full damage when one blast lands and stagger extends.
 [*]System recovery reworked.
 [/list]
 [b]FLAMETHROWER - WB-0000 BAD COOK[/b]
@@ -429,6 +542,7 @@ Charged attack:
 [b]PLASMA RIFLE - Vvc-760PR[/b]
 [list]
 [*]Damage interval on normal fire lowered in seconds from [b]0.1[/b] to [b]0.05[/b].
+[*]Charge shot hit count increased from [b]8[/b] to [b]10[/b].
 [/list]
 [b]PLASMA RIFLE - IA-C01W1: NEBULA[/b]
 [list]
@@ -441,11 +555,16 @@ Charged attack:
 [b]CORAL RIFLE - IB-C03W1: WLT 011[/b]
 [list]
 [*]Damage interval on normal fire lowered in seconds from [b]0.2[/b] to [b]0.1[/b].
-[*]Full charge aim speed slightly increased.
+[*]Full charge aim speed slightly increased from [b]75[/b] to [b]80[/b].
 [/list]
 [b]MULTI ENERGY RIFLE - 44-142 KRSV[/b]
 [list]
+[*]Projectile speed increased from [b]500[/b] to [b]600[/b] on normal fire.
 [*]Damage interval on normal fire lowered in seconds from [b]0.1[/b] to [b]0.05[/b].
+[*]Impact increased from [b]486[/b] to [b]499[/b] on charged fire.
+[*]Accumulated impact increased from [b]169[/b] to [b]174[/b] on charged fire.
+[*]Charge attack ammo consumption lowered from [b]8[/b] to [b]5[/b].
+[*]Fixed a bug where full charge fire would deal inconsistent damage.
 [/list]
 [b]PULSE GUN - HI-16: GU-Q1[/b]
 [list]
@@ -468,7 +587,7 @@ Charged attack:
 [*]Initial Guard duration increased from [b]1[/b] second to [b]1.2[/b] seconds.
 [*]Initial Guard damage reduction increased from [b]65[/b] to [b]66[/b].
 [*]Energy Load lowered from [b]220[/b] to [b]200[/b].
-[*]Cooldown delay lowered from [b]2.3[/b] to [b]1.7[/b].
+[*]Cooling increased from 88 to 98.
 [/list]
 [b]PULSE SHIELD - SI-27: SU-R8[/b]
 [list]
@@ -492,8 +611,10 @@ Charged attack:
 [/list]
 [b]SPREAD BAZOOKA - SB-033M MORLEY[/b]
 [list]
+[*]Projectile speed increased from [b]280[/b] to [b]300[/b].
 [*]Proximity detonation increased from [b]5[/b] to [b]7[/b].
 [*]Firing delay lowered by [b]1[/b] frame.
+[*]Will now knock opponents back horizontally to make lining up combos easier.
 [/list]
 [b]GRENADE CANNON - SONGBIRDS[/b]
 [list]
@@ -520,10 +641,19 @@ Charged attack:
 [*]Ammunition increased from [b]24[/b] to [b]36[/b].
 [*]Charged attack ammo consumption increased from [b]6[/b] to [b]9[/b] (This keeps it at 4 charged shots).
 [/list]
+[b]LASER CANNON - VE-60LCB[/b]
+[list]
+[*]Charged fire projectile speed increased from [b]550[/b] to [b]750[/b].
+[/list]
+[b]DIFFUSE LASER CANNON - VP-60LCD[/b]
+[list]
+[*]Fixed a bug where normal fire had inverted recoil knockback in air and on ground compared to other cannons.
+[/list]
 [b]PLASMA CANNON - FASAN/60E[/b]
 [list]
 [*]Rapid Fire increased from [b]0.5[/b] to [b]0.8[/b].
 [*]Damage interval on normal fire lowered in seconds from [b]0.1[/b] to [b]0.05[/b].
+[*]Charge fire damage interval lowered from 0.1 per second to 0.75 per second.
 [/list]
 [b]PULSE CANNON - KRANICH/60Z[/b]
 [list]
@@ -531,8 +661,9 @@ Charged attack:
 [/list]
 [b]PULSE SHIELD LAUNCHER - EULE/60D[/b]
 [list]
-[*]Deployment speed increased from [b]0.8[/b] to instant deployment.
-[*]Explosion initial radius increased from [b]3[/b] to [b]7[/b].
+[*]Deployment speed increased from [b]0.8[/b] to instant deployment, proximity radius and main damage blast activates after [b]0.8[/b] seconds, direct shots deal reduced damage like vanilla again.
+[*]Blast initial radius increased from [b]3[/b] to [b]7[/b].
+[*]Contact damage no longer instantly destroys friendly EULE shields. This was done because in vanilla high speed assault boost could leave them behind with delayed deployment and instant deployment removed this strategy.
 [/list]
 [b]LIGHT WAVE CANNON - IA-C01W3: AURORA[/b]
 [list]
@@ -556,21 +687,48 @@ Charged attack:
 [*]Burst fire interval lowered from [b]0.2[/b] to [b]0.18[/b].
 [*]Reload lowered from [b]5.4[/b] to [b]5.2[/b].
 [/list]
-[b]VERTICAL MISSILE LAUNCHER - BML-G1/P01VTC-04/BML-G1/P03VTC-08 / BML-G1/P07VTC-12[/b]
+[b]VERTICAL MISSILE LAUNCHER - BML-G1/P01VTC-04[/b]
 [list]
-[*]Improved speed.
+[*]Improved speed, will redirect after [b]1[/b] second if target is high up.
 [*]Damage increased from [b]124[/b] to [b]150[/b] per missile.
 [*]Accumulated impact increased from [b]55[/b] to [b]65[/b] per missile.
-[*]Direct hit modifier increased from [b]150[/b] to [b]155[/b].
+[*]Direct hit modifier increased from [b]150[/b] to [b]165[/b].
+[*]Reload time lowered from [b]4.8[/b] to [b]3.5[/b].
+[/list]
+[b]VERTICAL MISSILE LAUNCHER - BML-G1/P03VTC-08[/b]
+[list]
+[*]Improved speed, will redirect after [b]1[/b] second if target is high up.
+[*]Damage increased from [b]124[/b] to [b]150[/b] per missile.
+[*]Accumulated impact increased from [b]55[/b] to [b]65[/b] per missile.
+[*]Direct hit modifier increased from [b]150[/b] to [b]165[/b].
+[*]Reload time lowered from [b]6[/b] to [b]3.9[/b].
+[/list]
+[b]VERTICAL MISSILE LAUNCHER - BML-G1/P07VTC-12[/b]
+[list]
+[*]Improved speed, will redirect after [b]1[/b] second if target is high up.
+[*]Damage increased from [b]124[/b] to [b]150[/b] per missile.
+[*]Accumulated impact increased from [b]55[/b] to [b]65[/b] per missile.
+[*]Direct hit modifier increased from [b]150[/b] to [b]165[/b].
+[*]Reload time lowered from [b]7.5[/b] to [b]5.8[/b].
+[/list]
+[b]ACTIVE HOMING MISSILE LAUNCHER - BML-G3/P04ACT-01[/b]
+[list]
+[*]Missile lock on time lowered from [b]1.7[/b] to [b]1.5[/b] seconds.
+[/list]
+[b]ACTIVE HOMING MISSILE LAUNCHER - BML-G3/P05ACT-02[/b]
+[list]
+[*]Missile lock on time lowered from [b]2.8[/b] to [b]2.5[/b] seconds.
 [/list]
 [b]CONTAINER MISSILE LAUNCHER - BML-G1/P29CNT[/b]
 [list]
-[*]Initial missile velocity increased from 10 to 20.
+[*]Missiles acceleration increased from [b]60[/b] to [b]75[/b].
+[*]Now aims [b]45[/b] degree aim upwards when locked on to opponent.
 [/list]
 [b]CLUSTER MISSILE LAUNCHER - WR-0999 DELIVERY BOY[/b]
 [list]
 [*]Improved tracking, cruise height and payload speed.
 [*]Radius increased from [b]24[/b] to [b]28[/b], initial radius increased from [b]12[/b] to [b]14[/b].
+[*]Barrages a larger area.
 [*]Firing delay lowered by [b]3[/b] frames.
 [/list]
 [b]SCATTER MISSILE LAUNCHER - WS-5001 SOUP[/b]
@@ -602,10 +760,16 @@ Charged attack:
 [/list]
 [b]LASER TURRET - VP-60LT[/b]
 [list]
+[*]Direct hit adjustment increased from [b]35[/b] to [b]40[/b].
+[*]Effective range increased from [b]304[/b] to [b]370[/b] meters.
 [*]Idle duration increased from [b]20[/b] seconds to [b]60[/b] seconds.
 [*]Active duration increased from [b]10[/b] seconds to [b]15[/b] seconds.
 [*]Shots fired increased from [b]10[/b] to [b]15[/b].
 [*]Firing angle increased from [b]7[/b] to [b]15[/b].
+[/list]
+[b]LASER DRONE - Vvc-700LD[/b]
+[list]
+[*]Normal fire tracking improved.
 [/list]
 _________________________________________________________________________
 
@@ -616,10 +780,10 @@ _________________________________________________________________________
 [*]All heads have [b]+100[/b] stability.
 [*]All heads except VE-44B has [b]+20[/b] System recovery.
 [/list]
-[b]HEAD - HC-3000 WRECKER[/b]
+[b]HEAD - AH-J-124 BASHO[/b]
 [list]
-[*]Scan effect duration increased from [b]3[/b] to [b]5[/b] seconds.
-[*]Scan standby time lowered from [b]12[/b] to [b]6[/b] seconds.
+[*]AP increased from [b]1250[/b] to [b]1300[/b].
+[*]Attitude stability increased by an additional [b]6[/b], so from [b]394[/b] to [b]500[/b].
 [/list]
 [b]HEAD - DF-HD-08 TIAN-QIANG[/b]
 [list]
@@ -655,6 +819,11 @@ _________________________________________________________________________
 [list]
 [*]Energy defense increased from [b]142[/b] to [b]152[/b].
 [*]Explosive defense increased from [b]153[/b] to [b]158[/b].
+[/list]
+[b]HEAD - HC-3000 WRECKER[/b]
+[list]
+[*]Scan effect duration increased from [b]3[/b] to [b]5[/b] seconds.
+[*]Scan standby time lowered from [b]12[/b] to [b]6[/b] seconds.
 [/list]
 [b]HEAD - EL-TH-10 FIRMEZA[/b]
 [list]
@@ -834,6 +1003,7 @@ _________________________________________________________________________
 [list]
 [*]Kinetic defense increased from [b]285[/b] to [b]300[/b].
 [*]Explosive defense increased from [b]295[/b] to [b]305[/b].
+[*]Fixed an issue where Explosive Thrower and other weapons failed to track opponents when quick boosting on all tetrapods during varying boost duration timings.
 [/list]
 [b]LEGS - LG-022T BORNEMISSZA[/b]
 [list]
@@ -843,12 +1013,14 @@ _________________________________________________________________________
 [*]Assault Boost Dodge Energy Consumption lowered from [b]648[/b] to [b]448[/b].
 [*]Melee boost increased from [b]510[/b] to [b]710[/b].
 [*]All boosters have [b]900[/b] continuous melee thrust.
+[*]Tanks are actionable slightly sooner after kicking.
 [/list]
 [b]LEGS - VE-42B[/b]
 [list]
 [*]Thrust increased from [b]5984[/b] to [b]6668[/b] (This is airborne speed).
 [*]Melee boost increased from [b]620[/b] to [b]820[/b].
 [*]All boosters have [b]900[/b] continuous melee thrust.
+[*]Tanks are actionable slightly sooner after kicking.
 [/list]
 [b]EL-TL-11 FORTALEZA[/b]
 [list]
@@ -857,6 +1029,8 @@ _________________________________________________________________________
 [*]Drift speed doubled and has been made easier to engage.
 [*]Melee boost increased from [b]567[/b] to [b]767[/b].
 [*]All boosters have [b]900[/b] continuous melee thrust.
+[*]Tanks are actionable slightly sooner after kicking.
+[*]Fixed an issue after vanilla wheelchair nerfs where aerial quick boosts outperformed grounded ones, they now roughly match favoring grounded quick boosts slightly.
 [/list]
 _________________________________________________________________________
 [b][u]Boosters:[/u][/b]
@@ -919,6 +1093,10 @@ _________________________________________________________________________
 [list]
 [*]Weight lowered from [b]3420[/b] to [b]3000[/b].
 [/list]
+[b]AG-T-005 HOKUSHI[/b]
+[list]
+[*]EN Recharge increased from [b]1052[/b] to [b]1388[/b].
+[/list]
 [b]DF-GN-02 LING-TAI[/b]
 [list]
 [*]Supply Recovery increased from [b]833[/b] to [b]1000[/b].
@@ -930,10 +1108,14 @@ _________________________________________________________________________
 [/list]
 [b]VE-20A[/b]
 [list]
+[*]EN capacity increased from [b]2570[/b] to [b]2600[/b].
+[*]EN recharge increased from [b]787[/b] to [b]800[/b].
 [*]Post-Recovery EN Supply increased from [b]600[/b] to [b]720[/b].
 [/list]
 [b]VE-20C[/b]
 [list]
+[*]EN capacity increased from [b]3690[/b] to [b]3700[/b].
+[*]EN recharge increased from [b]555[/b] to [b]588[/b].
 [*]Supply Recovery increased from [b]377[/b] to [b]384[/b].
 [*]Post-Recovery EN Supply increased from [b]720[/b] to [b]820[/b].
 [/list]
@@ -963,21 +1145,19 @@ ________________________________________________________________________
 [*]Adjusted to clear direct hit vulnerability upon being able to move rather than upon firing.
 [*]Generally more consistent.
 [/list]
-
 [b]EXPANSION - PULSE ARMOR[/b]
 [list]
 [*]Health increased from [b]3300[/b] to [b]3500[/b].
 [*]Immune to damage while shielded.
 [/list]
-
 [b]EXPANSION - PULSE PROTECTION[/b]
 [list]
 [*]Barrier Health increased from [b]7000[/b] to [b]7500[/b].
 [*]Barrier Duration increased from [b]25[/b] seconds to [b]60[/b] seconds.
 [*]Instantly removes direct hit vulnerability.
-[*]Lowers impact taken by [b]30%[/b] and multiplies impact recovery by [b]10[/b] during animation. 
+[*]Lowers impact taken by [b]30%[/b] and multiplies impact recovery by [b]10[/b] during animation.
+[*]Fixed an issue where Explosive Thrower and Delivery Boy would one shot Pulse Protection by adjusting damage dealt down by half.
 [/list]
-
 [b]EXPANSION - TERMINAL ARMOR[/b]
 [list]
 [*]Duration increased from [b]5[/b] to [b]6[/b] seconds.
@@ -993,5 +1173,4 @@ Bonus:
 [*]Melee guard values listed in menus.
 [*]NPC Enemies can have their stagger state reset by melee charge attacks if hit during their direct hit vulnerable state post stun.
 [*]NPC Enemy direct hit vulnerability state post stun lowered from [b]2[/b] to [b]0.5[/b] seconds.
-[*]Arena mission COAM reward multiplied by [b]10[/b].
 [/list]
